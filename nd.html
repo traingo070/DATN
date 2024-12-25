@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+</header>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Thanh tài khoản */
+    .account-bar {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        background-color: #f3f3f3;
+        padding: 10px 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .account-bar span {
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .logout-button {
+        cursor: pointer;
+        background-color: #ff4d4d;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 3px;
+        font-size: 14px;
+    }
+
+    .logout-button:hover {
+        background-color: #e60000;
+    }
+
+    .header-image {
+        width: 100%;
+        height: 300;
+    }
+</style>
+
+
+
+
+<head>
+    <title>Quy trình vận hành và xử lý sự cố của trạm biến áp 110kV </title>
+</head>
+
+<body>
+    <img src="/DATN/image/SPKT.jpg" alt="Hình ảnh" style="display: block; margin: 0 auto;">
+    <div class="button-container">
+        <button class="nav-button" id="button1">Home </button>
+        <button class="nav-button" id="button2">Thông tin Trường </button>
+        <button class="nav-button" id="button3">Thông tin khoa Điện Điện tử </button>
+    </div>
+    <div class="account-bar" id="accountBar" style="display: none;">
+        <span id="usernameDisplay">Username</span>
+        <button class="logout-button" onclick="logout()">Thoát</button>
+    </div>
+</body>
+
+<h1> Quy trình vận hành trạm biến áp </h1>
+<h2 id="sdnt" style="cursor: pointer; color: rgb(136, 255, 0)"> I.Sơ đồ nhất thứ của trạm biến áp </h2>
+<h2 style="cursor: pointer; color: rgb(136, 255, 0)"> III.Quy trình vận hành với từng thiết bị </h2>
+<ul>
+    <li>
+        <h4 id="daocachly" style="cursor: pointer; color: rgb(51,0, 0);">Vận hành Dao Cách Ly </h4>
+    </li>
+    <li>
+        <h4 id="maycat" style="cursor: pointer; color: rgb(51,0, 0);">Vận hành Máy cắt </h4>
+    </li>
+    <li>
+        <h4 id="daotiepdia" style="cursor: pointer; color:rgb(51,0, 0);">Vận hành Dao Tiếp Địa </h4>
+    </li>
+    <li>
+        <h4 id="MBA" style="cursor: pointer; color: rgb(51,0, 0);">Vận hành Máy Biến Áp </h4>
+    </li>
+    <li>
+        <h4 id="TUC" style="cursor: pointer; color: rgb(51,0, 0);">Vận hành TUC </h4>
+    </li>
+    <li>
+        <h4 id="TD" style="cursor: pointer; color: rgb(51,0, 0);">Vận hành TD </h4>
+    </li>
+</ul>
+<h2 style="cursor: pointer; color: rgb(136, 255, 0)"> III.Quy trình vận hành các thiết bị trong 1 nhánh của trạm biến áp
+</h2>
+<ul>
+    <li>
+        <h4 id="171-7_C11" style="cursor: pointer; color: rgb(51,0, 0);">Vận hành từ dao tiếp địa 171-76 về Thanh cái
+            C11 hoặc 172-76 về thanh cái C12 </h4>
+    </li>
+    <li>
+        <h4 id="C11_C41" style="cursor: pointer; color: rgb(51,0, 0);">Vận hành từ thanh cái C11 về Thanh cái C41 hoặc
+            thanh cái C12 về Thanh cái C42 </h4>
+    </li>
+    <li>
+        <h4 id="Ngora" style="cursor: pointer; color: rgb(51,0, 0);">TTrình tự thao tác trên các ngõ ra cung cấp đường
+            dây phụ tải 22Kv </h4>
+    </li>
+    <li>
+        <h4 id="112" style="cursor: pointer; color: rgb(51,0, 0);">Vận hành nối 2 thanh cái 110kV bằng máy cắt 112 </h4>
+    </li>
+    <li>
+        <h4 id="412" style="cursor: pointer; color: rgb(51,0, 0);">Vận hành nối 2 thanh cái 22kV bằng máy cắt 412 </h4>
+    </li>
+</ul>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Chuyển trang bằng JavaScript</title>
+</head>
+
+<body>
+    <script>
+        document.getElementById('sdnt').onclick = function () {
+            window.location.href = "SDNL"; // URL cần chuyển
+        };
+        document.getElementById('daocachly').onclick = function () {
+            window.location.href = "daocachly.html"; // URL cần chuyển
+        };
+        document.getElementById('maycat').onclick = function () {
+            window.location.href = "maycat.html"; // URL cần chuyển
+        };
+        document.getElementById('daotiepdia').onclick = function () {
+            window.location.href = "daotiepdia.html"; // URL cần chuyển
+        };
+        document.getElementById('MBA').onclick = function () {
+            window.location.href = "MBA.html"; // URL cần chuyển
+        }
+        document.getElementById('TUC').onclick = function () {
+            window.location.href = "TUC.html"; // URL cần chuyển
+        };
+        document.getElementById('TD').onclick = function () {
+            window.location.href = "TD.html"; // URL cần chuyển
+        };
+        document.getElementById('171-7_C11').onclick = function () {
+            window.location.href = "171-7_C11.html"; // URL cần chuyển
+        };
+        document.getElementById('C11_C41').onclick = function () {
+            window.location.href = "C11_C41.html"; // URL cần chuyển
+        };
+        document.getElementById('Ngora').onclick = function () {
+            window.location.href = "Ngora.html"; // URL cần chuyển
+        };
+        document.getElementById('112').onclick = function () {
+            window.location.href = "112.html"; // URL cần chuyển
+        };
+        document.getElementById('412').onclick = function () {
+            window.location.href = "412.html"; // URL cần chuyển
+        };
+    </script>
+    <script>
+        // Kiểm tra trạng thái đăng nhập (giả lập)
+        const isLoggedIn = true; // Thay đổi thành false để kiểm tra trạng thái không đăng nhập  
+        const username = "Ngô Quang Trãi"; // Tên người dùng (giả lập)  
+
+        // Hiển thị thông tin tài khoản nếu đã đăng nhập
+        if (isLoggedIn) {
+            document.getElementById("accountBar").style.display = "flex";
+            document.getElementById("usernameDisplay").innerText = username;
+        }
+
+        // Xử lý khi nhấn nút "Thoát"
+        function logout() {
+            alert("Bạn đã thoát!");
+            // Giả lập điều hướng trở về trang đăng nhập
+            window.location.href = "index.html"; // Thay URL bằng trang đăng nhập thực tế
+        }
+    </script>
+</body>
+
+</html>
+
+</html>
+<style>
