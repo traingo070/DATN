@@ -105,7 +105,7 @@
                             <div style="position: absolute;left: 70%;">
                                 <img class="spin d-none" style="position: absolute;" src="/DATN/image/circle.png"
                                     width="55px" alt="">
-                                <img class="btn-xl" src="/DATN/image/mc.jpg" alt="">
+                                <img class="btn-xl disabled" src="/DATN/image/mc.jpg" alt="">
                             </div>
                             <div style="position: absolute;top: 15%;left: 5%;">
                                 <img class="xl" src="/DATN/image/xl-roi.jpg" alt="">
@@ -175,6 +175,7 @@
             // Initialize value and update UI accordingly
             let value = $(".btn[data-value='Remote']").data("value") || "Remote";
             updateUI(value);
+            
             // Button click handlers for images
             $('.btn-red').click(function () {
                 console.log(1)
@@ -188,8 +189,10 @@
                 $('.btn-ct').css('background-color', 'green')
                 $('.open-ct').removeClass('d-none')
                 $('.close-ct').addClass('d-none')
+                $('.btn-xl').removeClass('disabled')
             });
             $('.btn-xl').click(function () {
+
                 $('.spin').removeClass('d-none')
                 $('.spin').addClass('wheel')
                 setTimeout(() => {
@@ -197,6 +200,7 @@
                     $('.spin').addClass('d-none')
                     $('.xl').attr('src', '/DATN/image/xl-roi.jpg');
                 }, 2000)
+                $('.btn-xl').addClass('disabled')
             });
             // General button click handler
             $(".btn").click(function () {
