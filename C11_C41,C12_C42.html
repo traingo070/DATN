@@ -166,12 +166,13 @@
                                 <li class="group-6-11">B13: Đóng MC 171 </li>
                                 <li class="group-6-12">B14: Đóng MC 131</li>
                                 <li class="group-6-13">B15: Đóng MC 431</li>
+                                <li class="group-6-14">B16: Đóng T1</li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-12 p-5" style="background-color: #fff;">
+            <div class="col-12 col-md-12 pl-5 pr-5 pt-5" style="background-color: #fff;padding-bottom: 16rem;">
                 <div class="" style="margin-left: 25vw">
                     <div style="position: relative;">
                         <div class="1-a">
@@ -785,7 +786,7 @@
                                     </div>
                                     <div style="margin-left: -13px;">
                                         <div style="position: relative;">
-                                            <div class="line" style="margin-top: 6px;margin-left: 13px;"></div>
+                                            <div class="line 121-15-t" style="margin-top: 6px;margin-left: 13px;"></div>
                                             <div class="turn-o-vertical" style="margin-left: 15.5px;"></div>
                                             <div class="line" style="margin-left: 13px;"></div>
                                             <span class=""
@@ -818,7 +819,7 @@
                                     <div class="horizontal-main 112-r" style="width: 40px;"></div>
                                     <div style="margin-left: -16px;">
                                         <div style="position: relative;">
-                                            <div class="line" style="margin-top: 6px;margin-left: 13px;"></div>
+                                            <div class="line 121-25-t" style="margin-top: 6px;margin-left: 13px;"></div>
                                             <div class="turn-o-vertical" style="margin-left: 15.5px;"></div>
                                             <div class="line" style="margin-left: 13px;"></div>
                                             <span class=""
@@ -1503,6 +1504,13 @@
                             <div class="col-md-6 text-center p-0"><button class="btn btn-danger"
                                     id="c-431-group-6">Đóng</button></div>
                         </div>
+                        <div class="row m-3" style="background-repeat: no-repeat;background-size: cover;">
+                            <div class="col-12 text-center title-btn p-0">T1</div>
+                            <div class="col-md-6 text-center p-0"><button class="btn btn-success"
+                                    id="o-T1-group-6">Mở</button></div>
+                            <div class="col-md-6 text-center p-0"><button class="btn btn-danger"
+                                    id="c-T1-group-6">Đóng</button></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1539,9 +1547,9 @@
                     $('.171-7,.171-1,.131-1').addClass('turn-c-vertical')
                     $('.131-1-t,.131-1-b,.131-14-r,.131,.131-t,.131-b,.131-15-r,.T1-t,.CS1T1-r').css('background-color', close);
                     $('.T1-b,.CS-4T1-r,.431,.431-t,.431-b,.431-38-r').css('background-color', close);
-                    $('.431-up img').attr('src', '/DATN/image/arrow-up-red.png');
-                    $('.431-down img').attr('src', '/DATN/image/arrow-down-red.png');
-                    $('.T1 img').attr('src', '/DATN/image/1-b.jpg');
+                    $('.431-up img').attr('src', '/image/arrow-up-red.png');
+                    $('.431-down img').attr('src', '/image/arrow-down-red.png');
+                    $('.T1 img').attr('src', '/image/1-b.jpg');
                     $('.T1').css('margin-left', '-35px');
                     //default
                     $('.112,.112-r,.C12,.121-2-l,.TUC12,.TUC12-t,.TUC12-l,.TUC12-r').css('background-color', close);
@@ -1551,14 +1559,15 @@
                     $('.172-7,.172-2,.132-2').addClass('turn-c-vertical')
                     $('.132-2-t,.132-2-b,.132-24-r,.132,.132-t,.132-b,.132-15-r,.T2-t,.CS2T2-r').css('background-color', close);
                     $('.T2-b,.CS-4T2-r,.432,.432-t,.432-b,.432-38-r').css('background-color', close);
-                    $('.432-up img').attr('src', '/DATN/image/arrow-up-red.png');
-                    $('.432-down img').attr('src', '/DATN/image/arrow-down-red.png');
-                    $('.T2 img').attr('src', '/DATN/image/1-a.jpg');
+                    $('.432-up img').attr('src', '/image/arrow-up-red.png');
+                    $('.432-down img').attr('src', '/image/arrow-down-red.png');
+                    $('.T2 img').attr('src', '/image/1-a.jpg');
                     $('.T2').css('margin-left', '-35px');
                     openCS('.CS2T2');
                     openCS('.CS-4T2');
                     openCS('.CS1T1');
                     openCS('.CS-4T1');
+                    $('.121-15-t,.121-25-t').css('background-color', close);
 
                 }
                 else if (groupId == "group-2") {
@@ -1578,7 +1587,7 @@
                     openhorizontal('.121-1');
                     openvertical('.131-1');
                     openvertical('.171-1');
-                    closevertical('.171-7');
+                    openvertical('.171-7');
                     $('.171-t,.171-7-b,.171-75-r').css('background-color', none);
                     closehorizontal('.131-14');
                     $('.TU171,.TU171-l,.TU171-r,.TU171-t,.171-76-r,.171-7-t').css('background-color', close);
@@ -1590,20 +1599,21 @@
                     $('.172-7,.172-2,.132-2').addClass('turn-c-vertical')
                     $('.132-2-t,.132-2-b,.132-24-r,.132,.132-t,.132-b,.132-15-r,.T2-t,.CS2T2-r').css('background-color', close);
                     $('.T2-b,.CS-4T2-r,.432,.432-t,.432-b,.432-38-r').css('background-color', close);
-                    $('.432-up img').attr('src', '/DATN/image/arrow-up-red.png');
-                    $('.432-down img').attr('src', '/DATN/image/arrow-down-red.png');
-                    $('.T2 img').attr('src', '/DATN/image/1-a.jpg');
+                    $('.432-up img').attr('src', '/image/arrow-up-red.png');
+                    $('.432-down img').attr('src', '/image/arrow-down-red.png');
+                    $('.T2 img').attr('src', '/image/1-a.jpg');
                     $('.T2').css('margin-left', '-35px');
                     openCS('.CS2T2');
                     openCS('.CS-4T2');
                     openCS('.CS1T1');
                     openCS('.CS-4T1');
+                    $('.121-25-t').css('background-color', close);
 
                 }
                 else if (groupId == "group-3") {
 
                     $('.112,.C41,.112-l,.C11,.121-1-r,.121-1-l,.TUC11,.TUC11-t,.TUC11-l,.TUC11-r').css('background-color', close);
-                    $('.171-1-t').css('background-color', close);
+                    $('.171-1-t,.171-1-b,.TU171,.TU171-l,.TU171-r,.TU171-t').css('background-color', close);
                     $('.171,.171-t,.171-b,.171-7-t,.171-7-b,.171-76-r,.171-75-r,.171-15-r').css('background-color', close);
                     $('.121-2').addClass('turn-c-horizontal');
 
@@ -1630,14 +1640,15 @@
                     $('.172-7,.172-2,.132-2').addClass('turn-c-vertical')
                     $('.132-2-t,.132-2-b,.132-24-r,.132,.132-t,.132-b,.132-15-r,.T2-t,.CS2T2-r').css('background-color', close);
                     $('.T2-b,.CS-4T2-r,.432,.432-t,.432-b,.432-38-r').css('background-color', close);
-                    $('.432-up img').attr('src', '/DATN/image/arrow-up-red.png');
-                    $('.432-down img').attr('src', '/DATN/image/arrow-down-red.png');
-                    $('.T2 img').attr('src', '/DATN/image/1-a.jpg');
+                    $('.432-up img').attr('src', '/image/arrow-up-red.png');
+                    $('.432-down img').attr('src', '/image/arrow-down-red.png');
+                    $('.T2 img').attr('src', '/image/1-a.jpg');
                     $('.T2').css('margin-left', '-35px');
                     openCS('.CS2T2');
                     openCS('.CS-4T2');
                     openCS('.CS1T1');
                     openCS('.CS-4T1');
+                    $('.121-15-t,.121-25-t').css('background-color', close);
 
                 }
                 else if (groupId == "group-4") {
@@ -1671,14 +1682,15 @@
                     $('.172-7,.172-2,.132-2').addClass('turn-c-vertical')
                     $('.132-2-t,.132-2-b,.132-24-r,.132,.132-t,.132-b,.132-15-r,.T2-t,.CS2T2-r').css('background-color', close);
                     $('.T2-b,.CS-4T2-r,.432,.432-t,.432-b,.432-38-r').css('background-color', close);
-                    $('.432-up img').attr('src', '/DATN/image/arrow-up-red.png');
-                    $('.432-down img').attr('src', '/DATN/image/arrow-down-red.png');
-                    $('.T2 img').attr('src', '/DATN/image/1-a.jpg');
+                    $('.432-up img').attr('src', '/image/arrow-up-red.png');
+                    $('.432-down img').attr('src', '/image/arrow-down-red.png');
+                    $('.T2 img').attr('src', '/image/1-a.jpg');
                     $('.T2').css('margin-left', '-35px');
                     openCS('.CS2T2');
                     openCS('.CS-4T2');
                     openCS('.CS1T1');
                     openCS('.CS-4T1');
+                    $('.121-15-t,.121-25-t').css('background-color', close);
 
                 }
                 else if (groupId == "group-5") {
@@ -1690,9 +1702,9 @@
                     $('.171-7,.171-1,.131-1').addClass('turn-c-vertical')
                     $('.131-1-t,.131-1-b,.131-14-r,.131,.131-t,.131-b,.131-15-r,.T1-t,.CS1T1-r').css('background-color', close);
                     $('.T1-b,.CS-4T1-r,.431,.431-t,.431-b,.431-38-r').css('background-color', close);
-                    $('.431-up img').attr('src', '/DATN/image/arrow-up-red.png');
-                    $('.431-down img').attr('src', '/DATN/image/arrow-down-red.png');
-                    $('.T1 img').attr('src', '/DATN/image/1-b.jpg');
+                    $('.431-up img').attr('src', '/image/arrow-up-red.png');
+                    $('.431-down img').attr('src', '/image/arrow-down-red.png');
+                    $('.T1 img').attr('src', '/image/1-b.jpg');
                     $('.T1').css('margin-left', '-35px');
                     //default
                     $('.C42,.112-r,.C12,.121-2-l,.TUC12,.TUC12-t,.TUC12-l,.TUC12-r').css('background-color', close);
@@ -1702,14 +1714,15 @@
                     $('.172-7,.172-2,.132-2').addClass('turn-c-vertical')
                     $('.132-2-t,.132-2-b,.132-24-r,.132,.132-t,.132-b,.132-15-r,.T2-t,.CS2T2-r').css('background-color', close);
                     $('.T2-b,.CS-4T2-r,.432,.432-t,.432-b,.432-38-r').css('background-color', close);
-                    $('.432-up img').attr('src', '/DATN/image/arrow-up-red.png');
-                    $('.432-down img').attr('src', '/DATN/image/arrow-down-red.png');
-                    $('.T2 img').attr('src', '/DATN/image/1-a.jpg');
+                    $('.432-up img').attr('src', '/image/arrow-up-red.png');
+                    $('.432-down img').attr('src', '/image/arrow-down-red.png');
+                    $('.T2 img').attr('src', '/image/1-a.jpg');
                     $('.T2').css('margin-left', '-35px');
                     openCS('.CS2T2');
                     openCS('.CS-4T2');
                     openCS('.CS1T1');
                     openCS('.CS-4T1');
+                    $('.121-15-t,.121-25-t').css('background-color', close);
 
                 }
                 else if (groupId == "group-6") {
@@ -1744,14 +1757,15 @@
                     $('.172-7,.172-2,.132-2').addClass('turn-c-vertical')
                     $('.132-2-t,.132-2-b,.132-24-r,.132,.132-t,.132-b,.132-15-r,.T2-t,.CS2T2-r').css('background-color', close);
                     $('.T2-b,.CS-4T2-r,.432,.432-t,.432-b,.432-38-r').css('background-color', close);
-                    $('.432-up img').attr('src', '/DATN/image/arrow-up-red.png');
-                    $('.432-down img').attr('src', '/DATN/image/arrow-down-red.png');
-                    $('.T2 img').attr('src', '/DATN/image/1-a.jpg');
+                    $('.432-up img').attr('src', '/image/arrow-up-red.png');
+                    $('.432-down img').attr('src', '/image/arrow-down-red.png');
+                    $('.T2 img').attr('src', '/image/1-a.jpg');
                     $('.T2').css('margin-left', '-35px');
                     openCS('.CS2T2');
                     openCS('.CS-4T2');
                     openCS('.CS1T1');
                     openCS('.CS-4T1');
+                    $('.121-25-t').css('background-color', close);
 
                 }
             });
@@ -1788,7 +1802,6 @@
                 if (step == 3) {
                     $(`.group-1-${step}`).addClass('red')
                     step = 4;
-                    $('.171-b,.171-1-b,.171-1-t,.171-15-r').css('background-color', none);
                     $('.171').css('background-color', open);
                 } else {
                     alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại')
@@ -1800,6 +1813,7 @@
                 if (step == 4) {
                     $(`.group-1-${step}`).addClass('red')
                     step = 5;
+                    $('.171-b,.171-1-b,.171-1-t,.171-15-r,.121-15-t').css('background-color', none);
                     $('.171,.TUC11,.TUC11-t,.TUC11-l,.TUC11-r,.C11,.121-1-l,.121-1-r,.112,.112-l').css('background-color', none);
                     $('.131-t,.131-15-r,.131-1-t,.131-1-b,.131-14-r').css('background-color', none);
                     $('.171,.TUC11,.112').css('background-color', open);
@@ -2022,7 +2036,7 @@
                 if (step == 3) {
                     $(`.group-3-${step}`).addClass('red')
                     step = 4
-                    $('.112,.131-1-b,.171-b,.171-75-r,.171-1-b,.C11,.TUC11,.TUC11-t,.TUC11-l,.TUC11-r,.131-t,.131-1-t,.131-14-r,.131-15-r,.171-15-r,.171-1-t,.121-1-l,.121-1-r,.112-l').css('background-color', none);
+                    $('.112,.131-1-b,.171-b,.171-75-r,.171-1-b,.C11,.TUC11,.TUC11-t,.TUC11-l,.TUC11-r,.131-t,.131-1-t,.131-14-r,.131-15-r,.171-15-r,.171-1-t,.121-1-l,.121-1-r,.112-l,.121-15-t').css('background-color', none);
                     $('.112').css('background-color', open);
                 } else {
                     alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại')
@@ -2041,7 +2055,7 @@
                 if (step == 5) {
                     $(`.group-3-${step}`).addClass('red')
                     step = 6
-                    $('.171-b,.171-75-r,.171-1-b,.C11,.TUC11,.TUC11-t,.TUC11-l,.TUC11-r,.131-1-t,.131-14-r,.171-15-r,.171-1-t,.121-1-l,.121-1-r,.112-l').css('background-color', close);
+                    $('.171-b,.171-75-r,.171-1-b,.C11,.TUC11,.TUC11-t,.TUC11-l,.TUC11-r,.131-1-t,.131-14-r,.171-15-r,.171-1-t,.121-1-l,.121-1-r,.112-l,.121-15-t').css('background-color', close);
                     $('.171').css('background-color', close);
                 } else {
                     alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại')
@@ -2165,7 +2179,7 @@
                     $(`.group-5-${step}`).addClass('red')
                     step = 4
 
-                    $('.171-b,.171-15-r,.171-1-b,.171-1-t').css('background-color', none);
+                    $('.171-15-r').css('background-color', none);
                     $('.171').css('background-color', open);
                 } else {
                     alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại')
@@ -2176,7 +2190,7 @@
                     $(`.group-5-${step}`).addClass('red')
                     step = 5
 
-                    $('.112-l,.121-1-l,.121-1-r,.C11,.TUC11,.TUC11-t,.TUC11-l,.TUC11-r,.131-1-t,.131-14-r,.131-15-r,.131-1-b,.131-t').css('background-color', none);
+                    $('.112-l,.121-1-l,.121-1-r,.C11,.TUC11,.TUC11-t,.TUC11-l,.TUC11-r,.131-1-t,.131-14-r,.131-15-r,.131-1-b,.131-t,.121-15-t,.171-1-t,.171-1-b,.171-b').css('background-color', none);
                     $('.112').css('background-color', open);
                 } else {
                     alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại')
@@ -2318,7 +2332,7 @@
                 if (step == 8) {
                     $(`.group-6-${step}`).addClass('red')
                     step = 9
-                    $('.171,.171-b,.171-15-r,.171-1-t,.171-1-b,.112-l,.121-1-r,.121-1-l,.C11,.TUC11,.TUC11-t,.TUC11-l,.TUC11-r,.131-1-t,.131-1-b,.131-t,.131-14-r,.131-15-r').css('background-color', close);
+                    $('.171,.171-b,.171-15-r,.171-1-t,.171-1-b,.112-l,.121-1-r,.121-1-l,.C11,.TUC11,.TUC11-t,.TUC11-l,.TUC11-r,.131-1-t,.131-1-b,.131-t,.131-14-r,.131-15-r,.121-15-t').css('background-color', close);
                 } else if (step == 11) {
                     $(`.group-6-${step}`).addClass('red')
                     step = 12
@@ -2331,7 +2345,7 @@
                 if (step == 9) {
                     $(`.group-6-${step}`).addClass('red')
                     step = 10
-                    $('.171-b,.171-15-r,.171-1-t,.171-1-b,.112-l,.121-1-r,.121-1-l,.C11,.TUC11,.TUC11-t,.TUC11-l,.TUC11-r,.131-1-t,.131-1-b,.131-t,.131-14-r,.131-15-r').css('background-color', none);
+                    $('.171-b,.171-15-r,.171-1-t,.171-1-b,.112-l,.121-1-r,.121-1-l,.C11,.TUC11,.TUC11-t,.TUC11-l,.TUC11-r,.131-1-t,.131-1-b,.131-t,.131-14-r,.131-15-r,.121-15-t').css('background-color', none);
                     $('.171').css('background-color', open);
                 } else {
                     alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại')
@@ -2341,7 +2355,7 @@
                 if (step == 10) {
                     $(`.group-6-${step}`).addClass('red')
                     step = 11
-                    $('.171-b,.171-15-r,.171-1-t,.171-1-b,.112-l,.121-1-r,.121-1-l,.C11,.TUC11,.TUC11-t,.TUC11-l,.TUC11-r,.131-1-t,.131-1-b,.131-t,.131-14-r,.131-15-r').css('background-color', close);
+                    $('.171-b,.171-15-r,.171-1-t,.171-1-b,.112-l,.121-1-r,.121-1-l,.C11,.TUC11,.TUC11-t,.TUC11-l,.TUC11-r,.131-1-t,.131-1-b,.131-t,.131-14-r,.131-15-r,.121-15-t').css('background-color', close);
                     $('.112').css('background-color', close);
                 } else {
                     alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại')
@@ -2359,14 +2373,22 @@
             $('#c-431-group-6').click(function () {
                 if (step == 13) {
                     $(`.group-6-${step}`).addClass('red')
+                    step=14
                     closeCM('.431')
                     $('.T1-b,.CS-4T1-r,.431-38-r,.431-t').css('background-color', close);
                 } else {
                     alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại')
                 }
             });
-
-            $('#c-431-38-group-6,#c-131-15-group-6,#c-131-14-group-6,#o-171-7-group-6,#o-131-1-group-6,#o-121-1-group-6,#o-112-group-6,#o-131-group-6,#o-431-group-6').click(function () {
+            $('#c-T1-group-6').click(function () {
+                if (step == 14) {
+                    $(`.group-6-${step}`).addClass('red')
+                    closeT('.T1')
+                } else {
+                    alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại')
+                }
+            });
+            $('#c-431-38-group-6,#c-131-15-group-6,#c-131-14-group-6,#o-171-7-group-6,#o-131-1-group-6,#o-121-1-group-6,#o-112-group-6,#o-131-group-6,#o-431-group-6,#o-T1-group-6').click(function () {
                 alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại')
             });
             function openhorizontal(t) {
@@ -2391,43 +2413,43 @@
             }
 
             function openT(t) {
-                $(`${t} img`).attr('src', `/DATN/image/1-b.jpg`);
+                $(`${t} img`).attr('src', `/image/1-b.jpg`);
                 $(`${t}`).css('margin-left', '-30px');;
             }
             function closeT(t) {
-                $(`${t} img`).attr('src', `/DATN/image/1-a.jpg`);
+                $(`${t} img`).attr('src', `/image/1-a.jpg`);
                 $(`${t}`).css('margin-left', '-30px');;
             }
             function noneT(t) {
-                $(`${t} img`).attr('src', `/DATN/image/1.jpg`);
+                $(`${t} img`).attr('src', `/image/1.jpg`);
                 $(`${t}`).css('margin-left', '-30px');;
             }
             function openCS(t) {
-                $(`${t} img`).attr('src', `/DATN/image/2-b.png`);
+                $(`${t} img`).attr('src', `/image/2-b.png`);
                 $(`${t}`).css('top', '-13px');;
             }
             function closeCS(t) {
-                $(`${t} img`).attr('src', `/DATN/image/2-b.png`);
+                $(`${t} img`).attr('src', `/image/2-b.png`);
                 $(`${t}`).css('top', '-15px');
             }
             function noneCS(t) {
-                $(`${t} img`).attr('src', `/DATN/image/2.jpg`);
+                $(`${t} img`).attr('src', `/image/2.jpg`);
                 $(`${t}`).css('top', '-15px');
             }
             function openCM(t) {
                 console.log(t)
-                $(`${t}-up img`).attr('src', '/DATN/image/arrow-up-green.png');
-                $(`${t}-down img`).attr('src', '/DATN/image/arrow-down-green.png');
+                $(`${t}-up img`).attr('src', '/image/arrow-up-green.png');
+                $(`${t}-down img`).attr('src', '/image/arrow-down-green.png');
                 $(`${t}`).css('background-color', open);
             }
             function closeCM(t) {
-                $(`${t}-up img`).attr('src', '/DATN/image/arrow-up-red.png');
-                $(`${t}-down img`).attr('src', '/DATN/image/arrow-down-red.png');
+                $(`${t}-up img`).attr('src', '/image/arrow-up-red.png');
+                $(`${t}-down img`).attr('src', '/image/arrow-down-red.png');
                 $(`${t}`).css('background-color', close);
             }
             function noneCM(t) {
-                $(`${t}-up img`).attr('src', '/DATN/image/arrow-up.png');
-                $(`${t}-down img`).attr('src', '/DATN/image/arrow-down.png');
+                $(`${t}-up img`).attr('src', '/image/arrow-up.png');
+                $(`${t}-down img`).attr('src', '/image/arrow-down.png');
                 $(`${t}`).css('background-color', none);
             }
 
