@@ -159,7 +159,7 @@
 
                             <div style="position: relative;">
                                 <div class="line 131-1-t" style="margin-left: 13px;"></div>
-                                <div class="circle 131-1" style="margin-left: 4.5px"></div>
+                                <div class="turn-o-vertical 131-1" style="margin-left: 15.5px"></div>
                                 <div class="line 131-1-b" style="margin-left: 13px;"></div>
                                 <span class=""
                                     style="position: absolute;top: 2.5rem;left:1.8rem;width: 60px;">131-1</span>
@@ -182,8 +182,8 @@
                             <div class="row" style="margin-left: 22px;">
                                 <div class="horizontal-line 131-14-l"></div>
                                 <div style="position: relative;">
-                                    <div style="top: -7px;position: absolute;right: -16px;">
-                                        <div class="diamond 131-14"></div>
+                                    <div style="top: -11px;position: absolute;right: -9px;">
+                                        <div class="turn-o-horizontal 131-14"></div>
                                     </div>
                                     <span class=""
                                         style="position: absolute;top: 8px;right: -40px;width: 60px;">131-14</span>
@@ -208,8 +208,8 @@
                             <div class="row" style="margin-left: 22px;">
                                 <div class="horizontal-line 131-15-l"></div>
                                 <div style="position: relative;">
-                                    <div style="top: -7px;position: absolute;right: -16px;">
-                                        <div class="diamond 131-15"></div>
+                                    <div style="top: -11px;position: absolute;right: -9px;">
+                                        <div class="turn-o-horizontal 131-15"></div>
                                     </div>
                                     <span class=""
                                         style="position: absolute;top: 8px;right: -40px;width: 60px;">131-15</span>
@@ -229,8 +229,8 @@
                         <div style="margin-top: -14px;">
                             <div style="position: relative;">
                                 <div class="line T1-t" style="margin-left: 13px;"></div>
-                                <div class="T1" style="position: absolute;margin-left:-40px;">
-                                    <img src="/DATN/image/1-a.jpg" width="100px" alt="">
+                                <div class="T1" style="position: absolute;margin-left:-25px;">
+                                    <img src="/DATN/image/1.jpg" width="90px" alt="">
                                 </div>
                                 <div class="line T1-b" style="margin-left: 13px;margin-top: 46px;"></div>
                                 <span class="" style="position: absolute;top: 2.5rem;width: 200px;text-align:center;">T1
@@ -254,8 +254,8 @@
                             <div class="row" style="margin-left: 22px;">
                                 <div class="horizontal-line CS1T1-l"></div>
                                 <div style="position: relative;">
-                                    <div class="CS1T1" style="top: -13px;position: absolute;right: -30px;">
-                                        <img src="/DATN/image/2-a.png" width="50px" alt="">
+                                    <div class="CS1T1" style="top: -15px;position: absolute;right: -30px;">
+                                        <img src="/DATN/image/2.jpg" width="40px" alt="">
                                     </div>
                                     <span class=""
                                         style="position: absolute;top: 8px;right: -40px;width: 60px;">CS1T1</span>
@@ -281,8 +281,8 @@
                             <div class="row" style="margin-left: 22px;">
                                 <div class="horizontal-line CS4T1-l"></div>
                                 <div style="position: relative;">
-                                    <div style="top: -7px;position: absolute;right: -16px;">
-                                        <div class="diamond CS4T1"></div>
+                                    <div class="CS4T1" style="top: -15px;position: absolute;right: -30px;">
+                                        <img src="/DATN/image/2.jpg" width="40px" alt="">
                                     </div>
                                     <span class=""
                                         style="position: absolute;top: 8px;right: -40px;width: 60px;">CS4T1</span>
@@ -309,8 +309,8 @@
                             <div class="row" style="margin-left: 22px;">
                                 <div class="horizontal-line 431-38-l"></div>
                                 <div style="position: relative;">
-                                    <div style="top: -7px;position: absolute;right: -16px;">
-                                        <div class="diamond 431-38"></div>
+                                    <div style="top: -11px;position: absolute;right: -9px;">
+                                        <div class="turn-o-horizontal 431-38"></div>
                                     </div>
                                     <span class=""
                                         style="position: absolute;top: 8px;right: -40px;width: 60px;">431-38</span>
@@ -553,7 +553,8 @@
                 if (groupId == "group-1") {
                     $('.C11,.C41').css('background-color', '#ff0300');
                     $('.TUC11,.TUC11-l,.TUC11-r,.TUC11-t').css('background-color', '#ff0300');
-                    $('.131-1,.131-1-t,.131-1-b').css('background-color', '#ff0300');
+                    closevertical('.131-1')
+                    $('.131-1-t,.131-1-b').css('background-color', '#ff0300');
                     $('.131-14-r').css('background-color', '#ff0300');
                     $('.131-15-r').css('background-color', '#ff0300');
                     $('.131,.131-t,.131-b').css('background-color', '#ff0300');
@@ -565,10 +566,16 @@
                     $('.431-up img').attr('src', '/DATN/image/arrow-up-red.png');
                     $('.431-down img').attr('src', '/DATN/image/arrow-down-red.png');
 
-                    $('.131-14,.131-15,.CS4T1,.431-38').css('background-color', '#01fb42');
+                  //  $('.131-14,.131-15,.CS4T1,.431-38').css('background-color', '#01fb42');
+
+                    openhorizontal('.131-14')
+                    openhorizontal('.131-15')
+                    openhorizontal('.431-38')
+
                     $('.CS1T1 img').attr('src', '/DATN/image/2-b.png');
                     $('.T1 img').attr('src', '/DATN/image/1-a.jpg');
-
+                    closeT('.T1')
+                    openCS('.CS4T1')
                 }
                 if (groupId == "group-2") {
                     $('.C11,.C41').css('background-color', '#ff0300');
@@ -585,7 +592,7 @@
                     $('.431-up img').attr('src', '/DATN/image/arrow-up-red.png');
                     $('.431-down img').attr('src', '/DATN/image/arrow-down-red.png');
 
-                    $('.131-14,.131-15,.CS4T1,.431-38').css('background-color', '#01fb42');
+                   
                     $('.CS1T1 img').attr('src', '/DATN/image/2-b.png');
 
 
@@ -600,38 +607,47 @@
                     $('.431-down img').attr('src', '/DATN/image/arrow-down-green.png');
                     $('.CS1T1-r,.131-b,.T1-t,.131').css('background-color', '');
                     $('.131-t,.131-14-r,.131-15-r,.131-1,.131-1-b').css('background-color', '');
-                    $('.431-38').css('background-color', '#ff0300');
                     $('.CS1T1 img').attr('src', '/DATN/image/2-a.png');
-                    $('.CS4T1').css('background-color', '#ff0300');
+                    openhorizontal('.131-14')
+                    openhorizontal('.131-15')
+                    closehorizontal('.431-38')
+                    closeCS('.CS4T1')
                 }
                 else if (groupId == "group-3") {
                     $('.C11').css('background-color', '#ff0300');
                     $('.TUC11,.TUC11-l,.TUC11-r,.TUC11-t').css('background-color', '#ff0300');
                     $('.131-1-t').css('background-color', '#ff0300');
-                    $('.131-14-r,.131-14,.131-14-l').css('background-color', '#ff0300');
+                    $('.131-14-r,.131-14-l').css('background-color', '#ff0300');
 
+                    closehorizontal('.131-14')
+                    openhorizontal('.131-15')
+                    openhorizontal('.431-38')
 
-
-
-                    $('.131,.131-15,.CS4T1,.431-38').css('background-color', '#01fb42');
+                    $('.131').css('background-color', '#01fb42');
                     $('.CS1T1 img').attr('src', '/DATN/image/2-b.png');
+                    openCS('.CS4T1')
                 }
 
                 else if (groupId == "group-4") {
                     $('.C11').css('background-color', '#ff0300');
                     $('.TUC11,.TUC11-l,.TUC11-r,.TUC11-t').css('background-color', '#ff0300');
                     $('.131-1-t').css('background-color', '#ff0300');
-                    $('.131-14-r,.131-14,.131-14-l').css('background-color', '#ff0300');
+                    $('.131-14-r,.131-14-l').css('background-color', '#ff0300');
 
 
+                    openhorizontal('.131-15')
+                    openhorizontal('.431-38')
+                    openhorizontal('.131-14')
+                    closevertical('.131-1')
+                    openCS('.CS1T1')
+                    openCS('.CS4T1')
+                    closeT('.T1')
 
+                    $('.131').css('background-color', '#01fb42');
+                  
 
-                    $('.131,.131-15,.CS4T1,.431-38').css('background-color', '#01fb42');
-                    $('.CS1T1 img').attr('src', '/DATN/image/2-b.png');
-
-                    $('.131-14').css('background-color', '#01fb42');
                     $('.131-14-l').css('background-color', '');
-                    $('.131-1,.131-1-b,.131-t,.131-15-r').css('background-color', '#ff0300');
+                    $('.131-1-b,.131-t,.131-15-r').css('background-color', '#ff0300');
                     $('.131,.131-t,.131-15-r,.131-b,.T1-t,.CS1T1-r').css('background-color', '#ff0300');
                     $('.431').css('background-color', '#ff0300');
                     $('.431-up img').attr('src', '/DATN/image/arrow-up-red.png');
@@ -693,7 +709,8 @@
 
                 if (step == 4) {
                     step = 5;
-                    $('.131-t,.131-14-r,.131-15-r,.131-1,.131-1-b').css('background-color', '');
+                    $('.131-t,.131-14-r,.131-15-r,.131-1-b').css('background-color', '');
+                    openvertical('.131-1')
                     $('.group-1-4').addClass('red')
                 } else {
                     alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại')
@@ -705,7 +722,8 @@
 
                 if (step == 5) {
                     step = 6;
-                    $('.431-38').css('background-color', '#ff0300');
+                  //  $('.431-38').css('background-color', '#ff0300');
+                    closehorizontal('.431-38')
                     $('.group-1-5').addClass('red')
                 } else {
                     alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại')
@@ -717,8 +735,10 @@
 
                 if (step == 6) {
                     step = 7;
-                    $('.CS1T1 img').attr('src', '/DATN/image/2-a.png');
+                   // $('.CS1T1 img').attr('src', '/DATN/image/2-a.png');
+                    closeCS('.CS1T1')
                     $('.group-1-6').addClass('red')
+
                 } else {
                     alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại')
                 }
@@ -728,7 +748,8 @@
             $('#c-CS4T1-group-1').click(function () {
 
                 if (step == 7) {
-                    $('.CS4T1').css('background-color', '#ff0300');
+                   // $('.CS4T1 img').attr('src', '/DATN/image/2-a.png');
+                    closeCS('.CS4T1')
                     $('.group-1-7').addClass('red')
                 } else {
                     alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại')
@@ -746,7 +767,7 @@
 
                 if (step == 1) {
                     step = 2;
-                    $('.431-38').css('background-color', '#01fb42');
+                    openhorizontal('.431-38')
                     $('.group-2-1').addClass('red')
 
                 } else {
@@ -759,7 +780,7 @@
 
                 if (step == 2) {
                     step = 3;
-                    $('.CS1T1 img').attr('src', '/DATN/image/2-b.png');
+                    openCS('.CS1T1')
                     $('.group-2-2').addClass('red')
                 } else {
                     alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại')
@@ -771,7 +792,7 @@
 
                 if (step == 3) {
                     step = 4;
-                    $('.CS4T1').css('background-color', '#01fb42');
+                    openCS('.CS4T1')
                     $('.group-2-3').addClass('red')
                 } else {
                     alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại')
@@ -783,7 +804,8 @@
 
                 if (step == 4) {
                     step = 5;
-                    $('.131-1,.131-1-b,.131-15-r,.131-t').css('background-color', '#ff0300');
+                    $('.131-1-b,.131-15-r,.131-t').css('background-color', '#ff0300');
+                    closevertical('.131-1')
                     $('.group-2-4').addClass('red')
                 } else {
                     alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại')
@@ -841,7 +863,7 @@
 
                 if (step == 1) {
                     step = 2;
-                    $('.131-14').css('background-color', '#01fb42');
+                   openhorizontal('.131-14')
                     $('.131-14-l').css('background-color', '');
                     $('.group-3-1').addClass('red')
                 } else {
@@ -854,7 +876,8 @@
 
                 if (step == 2) {
                     step = 3;
-                    $('.131-1,.131-1-b,.131-t,.131-15-r').css('background-color', '#ff0300');
+                    closevertical('.131-1')
+                    $('.131-1-b,.131-t,.131-15-r').css('background-color', '#ff0300');
                     $('.group-3-2').addClass('red')
                 } else {
                     alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại')
@@ -891,7 +914,7 @@
             $('#c-T1-group-3').click(function () {
 
                 if (step == 5) {
-                    $('.T1 img').attr('src', '/DATN/image/1-a.jpg');
+                    closeT('.T1')
                     $('.C41,.431-b,.431-t,.431-38-r,.T1-b,.CS4T1-r').css('background-color', '#ff0300');
                     $('.group-3-5').addClass('red')
                 } else {
@@ -909,7 +932,7 @@
 
                 if (step == 1) {
                     step = 2;
-                    $('.T1 img').attr('src', '/DATN/image/1-b.jpg');
+                    openT('.T1')
                     $('.C41,.431-b,.431-t,.431-38-r,.T1-b,.CS4T1-r').css('background-color', '');
                     $('.group-4-1').addClass('red')
                 } else {
@@ -948,7 +971,8 @@
 
                 if (step == 4) {
                     step = 5;
-                    $('.131-1,.131-t,.131-15-r,.131-1-b').css('background-color', '');
+                    openvertical('.131-1')
+                    $('.131-t,.131-15-r,.131-1-b').css('background-color', '');
                     $('.group-4-4').addClass('red')
                 } else {
                     alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại')
@@ -959,7 +983,8 @@
             $('#c-131-14-group-4').click(function () {
 
                 if (step == 5) {
-                    $('.131-14-r,.131-14,.131-14-l').css('background-color', '#ff0300');
+                    closehorizontal('.131-14')
+                    $('.131-14-r,.131-14-l').css('background-color', '#ff0300');
                     $('.group-4-5').addClass('red')
                 } else {
                     alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại')
@@ -969,30 +994,81 @@
             $('#c-T1-group-4,#c-431-group-4,#c-131-group-4,#c-131-1-group-4,#o-131-14-group-4').click(function () {
                 alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại')
             });
-            function resetStylesAndImages() {
+            function openhorizontal(t) {
+                $(`${t}`).removeClass('turn-c-horizontal');
+                $(`${t}`).removeClass('turn-o-horizontal');
+                $(`${t}`).addClass('turn-o-horizontal');
+            }
+            function closehorizontal(t) {
+                $(`${t}`).removeClass('turn-c-horizontal');
+                $(`${t}`).removeClass('turn-o-horizontal');
+                $(`${t}`).addClass('turn-c-horizontal');
+            }
+            function openvertical(t) {
+                $(`${t}`).removeClass('turn-c-vertical');
+                $(`${t}`).removeClass('turn-o-vertical');
+                $(`${t}`).addClass('turn-o-vertical');
+            }
+            function closevertical(t) {
+                $(`${t}`).removeClass('turn-c-vertical');
+                $(`${t}`).removeClass('turn-o-vertical');
+                $(`${t}`).addClass('turn-c-vertical');
+            }
+
+            function openT(t) {
+                $(`${t} img`).attr('src', `/DATN/image/1-b.jpg`);
+                $(`${t}`).css('margin-left', '-30px');;
+            }
+            function closeT(t) {
+                $(`${t} img`).attr('src', `/DATN/image/1-a.jpg`);
+                $(`${t}`).css('margin-left', '-30px');;
+            }
+            function noneT(t) {
+                $(`${t} img`).attr('src', `/DATN/image/1.jpg`);
+                $(`${t}`).css('margin-left', '-30px');;
+            }
+            function openCS(t) {
+                $(`${t} img`).attr('src', `/DATN/image/2-b.png`);
+                $(`${t}`).css('top', '-13px');;
+            }
+            function closeCS(t) {
+                
+                $(`${t} img`).attr('src', `/DATN/image/2-a.png`);
+                $(`${t}`).css('top', '-15px');
+            }
+            function noneCS(t) {
+                $(`${t} img`).attr('src', `/DATN/image/2.jpg`);
+                $(`${t}`).css('top', '-15px');
+            }
+            function openCM(t) {
+                console.log(t)
+                $(`${t}-up img`).attr('src', '/DATN/image/arrow-up-green.png');
+                $(`${t}-down img`).attr('src', '/DATN/image/arrow-down-green.png');
+                $(`${t}`).css('background-color', open);
+            }
+            function closeCM(t) {
+                $(`${t}-up img`).attr('src', '/DATN/image/arrow-up-red.png');
+                $(`${t}-down img`).attr('src', '/DATN/image/arrow-down-red.png');
+                $(`${t}`).css('background-color', close);
+            }
+            function noneCM(t) {
+                $(`${t}-up img`).attr('src', '/DATN/image/arrow-up.png');
+                $(`${t}-down img`).attr('src', '/DATN/image/arrow-down.png');
+                $(`${t}`).css('background-color', '');
+            } function resetStylesAndImages() {
                 step = 1;
                 // Reset all background colors to their default
                 $('li').removeClass('red');
-                $('.C11,.C41').css('background-color', '');
-                $('.TUC11,.TUC11-l,.TUC11-r,.TUC11-t').css('background-color', '');
-                $('.131-1,.131-1-t,.131-1-b').css('background-color', '');
-                $('.131-14-r').css('background-color', '');
-                $('.131-15-r').css('background-color', '');
-                $('.131,.131-t,.131-b').css('background-color', '');
-                $('.T1-t,.T1-b').css('background-color', '');
-                $('.CS1T1-r').css('background-color', '');
-                $('.CS4T1-r').css('background-color', '');
-                $('.431-38-r').css('background-color', '');
-                $('.431,.431-t,.431-b').css('background-color', '');
-
-                // Reset image `src` attributes to their original state
-                $('.431-up img').attr('src', '/DATN/image/arrow-up.png'); // Replace with the default image path
-                $('.431-down img').attr('src', '/DATN/image/arrow-down.png');
-                $('.CS1T1 img').attr('src', '/DATN/image/2-b.png'); // Replace with the default image path
-                $('.T1 img').attr('src', '/DATN/image/1-b.jpg'); // Replace with the default image path
-                // Reset specific background colors to their default
-                $('.131-14,.131-15,.CS4T1,.431-38').css('background-color', '');
-
+                noneCM('.431')
+                noneT('.T1')
+                noneCS('.CS-4T1')
+                noneCS('.CS1T1')
+                openhorizontal('.431-38')
+                openhorizontal('.131-15')
+                openhorizontal('.131-14')
+               
+                openvertical('.131-1')
+                $('.C11,.TUC11,.TUC11-t,.TUC11-l,.TUC11-r,.131-1-t,.131-14-r,.131-1-b,.131,.131-t,.131-b,.131-15-r,.T1-t,.T1-b,.CS1T1-r,.CS-4T1-r,.431-t,.431-b,.C41,.431-38-r').css('background-color', '');
             }
 
         });
