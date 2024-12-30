@@ -98,10 +98,13 @@
                 </div>
 
             </div>
-            <div class="col-12 col-md-7 mb-5 p-5 group-2 group-1 d-none">
+            <div class="col-12 col-md-7 mb-5 p-5 ">
                 <div class="d-flex justify-content-center">
                     <div class="col-6">
-                        <div style="width: 300px;height: 400px; border: 1px solid black; position: relative;">
+                        <div class="group">
+                        <img width="250px" src="/DATN/image/maycat.jpg" alt="">
+                        </div>
+                        <div class="group-2 group-1 d-none" style="width: 300px;height: 400px; border: 1px solid black; position: relative;">
                             <div style="position: absolute;left: 70%;">
                                 <img class="spin d-none" style="position: absolute;" src="/DATN/image/circle.png"
                                     width="55px" alt="">
@@ -162,7 +165,7 @@
                 const groupId = $(this).attr('id');
 
                 // Hide all groups and show the clicked one
-                $('.group-1, .group-2, .group-3, .group-4').addClass('d-none');
+                $('.group-1, .group-2, .group').addClass('d-none');
                 $(`.${groupId}`).removeClass('d-none');
                 $('.group-img').removeClass('d-none');
             });
@@ -182,7 +185,7 @@
                 $('.btn-ct').css('background-color', 'red')
                 $('.open-ct').addClass('d-none')
                 $('.close-ct').removeClass('d-none')
-                $('.xl').attr('src', '/DATN/image/xl-chua.jpg');
+                $('.xl').attr('src', '/image/xl-chua.jpg');
             });
 
             $('.btn-green').click(function () {
@@ -198,7 +201,7 @@
                 setTimeout(() => {
                     $('.spin').removeClass('wheel')
                     $('.spin').addClass('d-none')
-                    $('.xl').attr('src', '/DATN/image/xl-roi.jpg');
+                    $('.xl').attr('src', '/image/xl-roi.jpg');
                 }, 2000)
                 $('.btn-xl').addClass('disabled')
             });
