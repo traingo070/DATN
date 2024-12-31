@@ -154,14 +154,14 @@
             updateUI(value);
 
             // Button click handlers for images
-            $('.btn-red, .btn-left').click(function () {
+            $('.btn-red, .btn-right').click(function () {
                 $('.DCL').attr('src', '/DATN/image/DCL đóng.jpg');
             });
 
-            $('.btn-green, .btn-right').click(function () {
+            $('.btn-green, .btn-left').click(function () {
                 $('.DCL').attr('src', '/DATN/image/DCL mở.jpg');
             });
-
+            
             // General button click handler
             $(".btn").click(function () {
                 value = $(this).data("value"); // Update value based on clicked button
