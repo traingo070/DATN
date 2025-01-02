@@ -543,6 +543,10 @@
         $(document).ready(function () {
             // Toggle visibility for instruction groups
             var step = 1;
+            const close = '#ff0300'
+            const open = '#01fb42'
+            const fail = '#FFEA8A'
+            const none = ''
             $('.click').on('click', function () {
                 // Get the group ID of the clicked item
                 const groupId = $(this).attr('id');
@@ -580,10 +584,8 @@
                 if (groupId == "group-2") {
                     $('.C11,.C41').css('background-color', '#ff0300');
                     $('.TUC11,.TUC11-l,.TUC11-r,.TUC11-t').css('background-color', '#ff0300');
-                    $('.131-1,.131-1-t,.131-1-b').css('background-color', '#ff0300');
                     $('.131-14-r').css('background-color', '#ff0300');
                     $('.131-15-r').css('background-color', '#ff0300');
-                    $('.131,.131-t,.131-b').css('background-color', '#ff0300');
                     $('.T1-t,.T1-b').css('background-color', '#ff0300');
                     $('.CS1T1-r').css('background-color', '#ff0300');
                     $('.CS4T1-r').css('background-color', '#ff0300');
@@ -606,6 +608,7 @@
                     $('.431-up img').attr('src', '/DATN/image/arrow-up-green.png');
                     $('.431-down img').attr('src', '/DATN/image/arrow-down-green.png');
                     $('.CS1T1-r,.131-b,.T1-t,.131').css('background-color', '');
+                    $('.131').css('background-color', open);
                     $('.131-t,.131-14-r,.131-15-r,.131-1,.131-1-b').css('background-color', '');
                     $('.CS1T1 img').attr('src', '/DATN/image/2-a.png');
                     openhorizontal('.131-14')
@@ -697,7 +700,8 @@
 
                 if (step == 3) {
                     step = 4;
-                    $('.CS1T1-r,.131-b,.T1-t,.131').css('background-color', '');
+                    $('.CS1T1-r,.131-b,.T1-t').css('background-color', '');
+                    $('.131').css('background-color', open);
                     $('.group-1-3').addClass('red')
                 } else {
                     alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại')
@@ -959,7 +963,8 @@
 
                 if (step == 3) {
                     step = 4;
-                    $('.131,.131-b,.T1-t,.CS1T1-r').css('background-color', '');
+                    $('.131-b,.T1-t,.CS1T1-r').css('background-color', '');
+                    $('.131').css('background-color', '');
                     $('.group-4-3').addClass('red')
                 } else {
                     alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại')
@@ -985,6 +990,7 @@
                 if (step == 5) {
                     closehorizontal('.131-14')
                     $('.131-14-r,.131-14-l').css('background-color', '#ff0300');
+                    
                     $('.group-4-5').addClass('red')
                 } else {
                     alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại')
@@ -1068,8 +1074,7 @@
                 openhorizontal('.131-14')
                
                 openvertical('.131-1')
-                $('.C11,.TUC11,.TUC11-t,.TUC11-l,.TUC11-r,.131-1-t,.131-14-r,.131-1-b,.131-t,.131-b,.131-15-r,.T1-t,.T1-b,.CS1T1-r,.CS-4T1-r,.431-t,.431-b,.C41,.431-38-r').css('background-color', '');
-                $('.131').css('background-color', '#01fb42');
+                $('.C11,.TUC11,.TUC11-t,.TUC11-l,.TUC11-r,.131,.131-1-t,.131-14-r,.131-1-b,.131-t,.131-b,.131-15-r,.T1-t,.T1-b,.CS1T1-r,.CS-4T1-r,.431-t,.431-b,.C41,.431-38-r').css('background-color', '');
             }
 
         });
